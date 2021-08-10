@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaMercado
 {
-    public partial class Form1 : Form
+    public partial class TelaAdministrador : Form
     {
-        public Form1()
+        public TelaAdministrador()
         {
             InitializeComponent();
         }
