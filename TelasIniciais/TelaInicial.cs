@@ -87,5 +87,10 @@ namespace SistemaMercado
                 MessageBox.Show("Verifique se escolheu uma opção!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void cboOpcoes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
