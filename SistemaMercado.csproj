@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="ListaLogin.cs" />
     <Compile Include="TelasIniciais\TelaAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,12 +66,6 @@
     </Compile>
     <Compile Include="TelasLogin\FuncoesTelaLogin\TelaAlterar.Designer.cs">
       <DependentUpon>TelaAlterar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TelasLogin\FuncoesTelaLogin\TelaListar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelasLogin\FuncoesTelaLogin\TelaListar.Designer.cs">
-      <DependentUpon>TelaListar.cs</DependentUpon>
     </Compile>
     <Compile Include="TelasLogin\FuncoesTelaLogin\TelaProcurar.cs">
       <SubType>Form</SubType>
@@ -127,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelasLogin\FuncoesTelaLogin\TelaAdicionar.resx">
       <DependentUpon>TelaAdicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelasLogin\FuncoesTelaLogin\TelaProcurar.resx">
+      <DependentUpon>TelaProcurar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelasLogin\FuncoesTelaLogin\TelaRemover.resx">
       <DependentUpon>TelaRemover.cs</DependentUpon>
