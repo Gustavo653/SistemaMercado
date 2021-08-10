@@ -26,6 +26,12 @@ namespace SistemaMercado
                 this.Visible = false;
                 tela.Show();
             }
+            else if (cboOpcoes.Text == "Excluir")
+            {
+                TelaRemover tela = new TelaRemover();
+                this.Visible = false;
+                tela.Show();
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

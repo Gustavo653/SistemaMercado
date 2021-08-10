@@ -1,7 +1,7 @@
 ﻿
-namespace SistemaMercado
+namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
 {
-    partial class TelaGerenciarLogins
+    partial class TelaRemover
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace SistemaMercado
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaGerenciarLogins));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaRemover));
             this.btnVoltar = new System.Windows.Forms.Button();
             this.cboOpcoes = new System.Windows.Forms.ComboBox();
             this.btnSelecionar = new System.Windows.Forms.Button();
@@ -39,10 +39,10 @@ namespace SistemaMercado
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.PapayaWhip;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Location = new System.Drawing.Point(175, 101);
+            this.btnVoltar.Location = new System.Drawing.Point(161, 99);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltar.TabIndex = 5;
+            this.btnVoltar.TabIndex = 8;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -59,37 +59,38 @@ namespace SistemaMercado
             "Excluir",
             "Procurar",
             "Listar"});
-            this.cboOpcoes.Location = new System.Drawing.Point(94, 51);
+            this.cboOpcoes.Location = new System.Drawing.Point(80, 49);
             this.cboOpcoes.Name = "cboOpcoes";
             this.cboOpcoes.Size = new System.Drawing.Size(156, 21);
-            this.cboOpcoes.TabIndex = 4;
+            this.cboOpcoes.TabIndex = 7;
             // 
             // btnSelecionar
             // 
             this.btnSelecionar.BackColor = System.Drawing.Color.PapayaWhip;
             this.btnSelecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelecionar.Location = new System.Drawing.Point(94, 101);
+            this.btnSelecionar.Location = new System.Drawing.Point(80, 99);
             this.btnSelecionar.Name = "btnSelecionar";
             this.btnSelecionar.Size = new System.Drawing.Size(75, 23);
-            this.btnSelecionar.TabIndex = 3;
+            this.btnSelecionar.TabIndex = 6;
             this.btnSelecionar.Text = "Selecionar";
             this.btnSelecionar.UseVisualStyleBackColor = false;
             this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
-            // TelaGerenciarLogins
+            // TelaRemover
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
-            this.ClientSize = new System.Drawing.Size(344, 174);
+            this.ClientSize = new System.Drawing.Size(316, 171);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.cboOpcoes);
             this.Controls.Add(this.btnSelecionar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "TelaGerenciarLogins";
-            this.Text = "Gerenciar Logins";
+            this.Name = "TelaRemover";
+            this.Text = "Remover Login";
+            this.Load += new System.EventHandler(this.TelaRemover_Load);
             this.ResumeLayout(false);
 
         }

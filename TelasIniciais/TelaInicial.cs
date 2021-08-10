@@ -49,13 +49,11 @@ namespace SistemaMercado
                         //usuario varchar(max) not null,
                         //senha varchar(max) not null
                         //)
-                        //INSERT into dbo.Usuarios(usuario, senha) values('60068066', '60068066')
-                        usuario = GetHashCode().ToString();
+                        //INSERT into dbo.Usuarios(usuario, senha) values('Admin', '60068066')
                         senha = GetHashCode().ToString();                    
-                        SqlConnection conn = new SqlConnection("Data Source=BUE205D19;Initial Catalog=BDTurmaManha;Persist Security Info=True;User ID=guest01;Password=@Senac2021");
                         string select = $"SELECT usuario, senha from dbo.Usuarios";
-                        SqlCommand cmd = new SqlCommand(select, conn);
-                        conn.Open();
+                        SqlCommand cmd = new SqlCommand(select, DBConnection.Connection);
+                        DBConnection.Connection.Open();
                         SqlDataReader dr = cmd.ExecuteReader();
                         while (dr.Read())
                         {
@@ -64,6 +62,7 @@ namespace SistemaMercado
                                 login = true;
                             }
                         }
+                        DBConnection.Connection.Close();
                     }
                     else
                     {
@@ -86,11 +85,6 @@ namespace SistemaMercado
             {
                 MessageBox.Show("Verifique se escolheu uma opção!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void cboOpcoes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -60,6 +60,30 @@
     <Compile Include="TelasLogin\FuncoesTelaLogin\TelaAdicionar.Designer.cs">
       <DependentUpon>TelaAdicionar.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelasLogin\FuncoesTelaLogin\TelaAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelasLogin\FuncoesTelaLogin\TelaAlterar.Designer.cs">
+      <DependentUpon>TelaAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelasLogin\FuncoesTelaLogin\TelaListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelasLogin\FuncoesTelaLogin\TelaListar.Designer.cs">
+      <DependentUpon>TelaListar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelasLogin\FuncoesTelaLogin\TelaProcurar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelasLogin\FuncoesTelaLogin\TelaProcurar.Designer.cs">
+      <DependentUpon>TelaProcurar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelasLogin\FuncoesTelaLogin\TelaRemover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelasLogin\FuncoesTelaLogin\TelaRemover.Designer.cs">
+      <DependentUpon>TelaRemover.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelasLogin\TelaGerenciarLogins.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelasLogin\FuncoesTelaLogin\TelaAdicionar.resx">
       <DependentUpon>TelaAdicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelasLogin\FuncoesTelaLogin\TelaRemover.resx">
+      <DependentUpon>TelaRemover.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelasLogin\TelaGerenciarLogins.resx">
       <DependentUpon>TelaGerenciarLogins.cs</DependentUpon>

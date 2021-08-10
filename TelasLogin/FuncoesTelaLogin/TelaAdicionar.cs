@@ -28,7 +28,6 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             string insert = $"INSERT into dbo.Usuarios (usuario, senha) values ('{txtUsuario.Text}', '{txtSenha.Text}')";
-            SqlCommand cmd = new SqlCommand(insert, DBConnection.Connection);
             DBConnection.Executa(insert);
             txtUsuario.Clear();
             txtSenha.Clear();
