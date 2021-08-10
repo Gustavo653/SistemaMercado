@@ -53,6 +53,18 @@
     <Compile Include="TelaAdministrador.Designer.cs">
       <DependentUpon>TelaAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaGerenciarLogins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaGerenciarLogins.Designer.cs">
+      <DependentUpon>TelaGerenciarLogins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaGerenciarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaGerenciarProdutos.Designer.cs">
+      <DependentUpon>TelaGerenciarProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +88,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TelaAdministrador.resx">
+      <DependentUpon>TelaAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>

@@ -39,8 +39,8 @@ namespace SistemaMercado
                 else
                 {
                     bool login = false;
-                    string usuario = Interaction.InputBox("Insira o login", "Login", "", 400, 200);
-                    string senha = Interaction.InputBox("Insira a senha", "Senha", "", 400, 200);
+                    string usuario = Interaction.InputBox("Insira o login", "Login", "", 200, 200);
+                    string senha = Interaction.InputBox("Insira a senha", "Senha", "", 200, 200);
                     if (!string.IsNullOrEmpty(usuario) && !string.IsNullOrEmpty(senha))
                     {
                         //codigo para o BD de login
@@ -51,8 +51,7 @@ namespace SistemaMercado
                         //)
                         //INSERT into dbo.Usuarios(usuario, senha) values('60068066', '60068066')
                         usuario = GetHashCode().ToString();
-                        senha = GetHashCode().ToString();
-                        MessageBox.Show(usuario);
+                        senha = GetHashCode().ToString();                    
                         SqlConnection conn = new SqlConnection("Data Source=BUE205D19;Initial Catalog=BDTurmaManha;Persist Security Info=True;User ID=guest01;Password=@Senac2021");
                         string select = $"SELECT usuario, senha from dbo.Usuarios";
                         SqlCommand cmd = new SqlCommand(select, conn);

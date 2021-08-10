@@ -16,5 +16,26 @@ namespace SistemaMercado
         {
             InitializeComponent();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btnSelecionar_Click(object sender, EventArgs e)
+        {
+            if(cboOpcoes.Text == "Gerenciar logins")
+            {
+                TelaGerenciarLogins tela = new TelaGerenciarLogins();
+                this.Visible = false;
+                tela.Show();
+            }
+            else
+            {
+                TelaGerenciarProdutos tela = new TelaGerenciarProdutos();
+                this.Visible = false;
+                tela.Show();
+            }
+        }
     }
 }
