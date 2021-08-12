@@ -44,6 +44,7 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
         {
             string delete = $"DELETE from dbo.Usuarios WHERE usuario = '{cboOpcoes.Text}'";
             DBConnection.Executa(delete);
+            MessageBox.Show("Usuário removido!", "Remover", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

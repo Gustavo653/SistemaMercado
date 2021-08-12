@@ -38,6 +38,7 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
             this.btnVoltar = new System.Windows.Forms.Button();
             this.cboOpcoes = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -120,6 +121,9 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
             this.label2.TabIndex = 13;
             this.label2.Text = "Selecione o usuário ->";
             // 
+            // backgroundWorker1
+            // 
+            // 
             // TelaAlterar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,5 +160,6 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.ComboBox cboOpcoes;
         private System.Windows.Forms.Label label2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

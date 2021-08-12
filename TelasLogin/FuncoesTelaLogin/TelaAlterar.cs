@@ -49,6 +49,9 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
                 string senhaHash = hash.CriptografarSenha(txtSenha.Text);
                 string update = $"UPDATE dbo.Usuarios Set usuario = '{txtUsuario.Text}', senha = '{senhaHash}' WHERE usuario = '{cboOpcoes.Text}'";
                 DBConnection.Executa(update);
+                txtUsuario.Clear();
+                txtSenha.Clear();
+                MessageBox.Show("Usuário alterado!", "Alterar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
