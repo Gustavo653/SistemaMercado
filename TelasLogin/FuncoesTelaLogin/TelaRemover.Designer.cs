@@ -89,6 +89,7 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TelaRemover";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remover Login";
             this.Load += new System.EventHandler(this.TelaRemover_Load);
             this.ResumeLayout(false);

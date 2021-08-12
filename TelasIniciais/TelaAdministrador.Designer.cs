@@ -30,22 +30,22 @@ namespace SistemaMercado
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAdministrador));
-            this.btnSair = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.cboOpcoes = new System.Windows.Forms.ComboBox();
             this.btnSelecionar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnSair
+            // btnVoltar
             // 
-            this.btnSair.BackColor = System.Drawing.Color.PapayaWhip;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Location = new System.Drawing.Point(175, 101);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 5;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnVoltar.BackColor = System.Drawing.Color.PapayaWhip;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Location = new System.Drawing.Point(175, 101);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 5;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // cboOpcoes
             // 
@@ -79,7 +79,7 @@ namespace SistemaMercado
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(344, 174);
-            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.cboOpcoes);
             this.Controls.Add(this.btnSelecionar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -94,7 +94,7 @@ namespace SistemaMercado
 
         #endregion
 
-        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.ComboBox cboOpcoes;
         private System.Windows.Forms.Button btnSelecionar;
     }

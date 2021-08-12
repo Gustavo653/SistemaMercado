@@ -114,6 +114,7 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TelaAdicionar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Login";
             this.ResumeLayout(false);
             this.PerformLayout();

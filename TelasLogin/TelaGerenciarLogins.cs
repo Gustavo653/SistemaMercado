@@ -32,6 +32,18 @@ namespace SistemaMercado
                 this.Visible = false;
                 tela.Show();
             }
+            else if (cboOpcoes.Text == "Alterar")
+            {
+                TelaAlterar tela = new TelaAlterar();
+                this.Visible = false;
+                tela.Show();
+            }
+            else if (cboOpcoes.Text == "Procurar")
+            {
+                TelaProcurar tela = new TelaProcurar();
+                this.Visible = false;
+                tela.Show();
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

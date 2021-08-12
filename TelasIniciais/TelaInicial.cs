@@ -43,21 +43,22 @@ namespace SistemaMercado
                     string senha = Interaction.InputBox("Insira a senha", "Senha", "", 200, 200);
                     if (!string.IsNullOrEmpty(usuario) && !string.IsNullOrEmpty(senha))
                     {
-                        //codigo para o BD de login
-                        //                        Create Table dbo.Usuarios(
-                        //idUsuario int not null identity(1, 1),
-                        //usuario varchar(max) not null,
-                        //senha varchar(max) not null
-                        //)
-                        //INSERT into dbo.Usuarios(usuario, senha) values('Admin', '60068066')
-                        senha = GetHashCode().ToString();                    
+                        //senha = senha.GetHashCode().ToString();
+
+                        HashLogin hash = new HashLogin(SHA512.Create());
+                        bool senhaHash;
+
+
                         string select = $"SELECT usuario, senha from dbo.Usuarios";
                         SqlCommand cmd = new SqlCommand(select, DBConnection.Connection);
                         DBConnection.Connection.Open();
                         SqlDataReader dr = cmd.ExecuteReader();
                         while (dr.Read())
                         {
-                            if (usuario == dr["usuario"].ToString() && senha == dr["senha"].ToString())
+
+                            senhaHash = hash.VerificarSenha(senha, dr["senha"].ToString());
+
+                            if (usuario == dr["usuario"].ToString() && senhaHash)//senha == dr["senha"].tostring()
                             {
                                 login = true;
                             }

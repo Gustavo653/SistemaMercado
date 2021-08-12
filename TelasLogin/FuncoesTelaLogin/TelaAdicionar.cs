@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,10 +28,13 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            string insert = $"INSERT into dbo.Usuarios (usuario, senha) values ('{txtUsuario.Text}', '{txtSenha.Text}')";
+            HashLogin hash = new HashLogin(SHA512.Create());
+            string senhaHash = hash.CriptografarSenha(txtSenha.Text);
+            string insert = $"INSERT into dbo.Usuarios (usuario, senha) values ('{txtUsuario.Text}', '{senhaHash}')";
             DBConnection.Executa(insert);
             txtUsuario.Clear();
             txtSenha.Clear();
+            MessageBox.Show("Usuário adicionado!", "Adicionar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

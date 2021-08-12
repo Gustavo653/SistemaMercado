@@ -42,6 +42,7 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
             // 
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.AllowUserToOrderColumns = true;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(12, 73);
             this.dgvUsuarios.Name = "dgvUsuarios";
@@ -93,6 +94,7 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
             this.cckListar.TabIndex = 4;
             this.cckListar.Text = "Listar todos";
             this.cckListar.UseVisualStyleBackColor = true;
+            this.cckListar.CheckedChanged += new System.EventHandler(this.cckListar_CheckedChanged);
             // 
             // TelaProcurar
             // 
@@ -105,8 +107,11 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
             this.Controls.Add(this.cboOpcoes);
             this.Controls.Add(this.txtProcurar);
             this.Controls.Add(this.dgvUsuarios);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "TelaProcurar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Procurar Login";
             this.Load += new System.EventHandler(this.TelaProcurar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();

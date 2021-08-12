@@ -57,6 +57,29 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
                 dgvUsuarios.DataSource = usuarios;
                 DBConnection.Connection.Close();
             }
+            else
+            {
+                List<ListaLogin> usuarios = new List<ListaLogin>();
+                string select = $"SELECT * from dbo.Usuarios WHERE usuario = '{cboOpcoes.Text}'";
+                SqlCommand cmd = new SqlCommand(select, DBConnection.Connection);
+                DBConnection.Connection.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    ListaLogin lista = new ListaLogin(dr["usuario"].ToString(), dr["senha"].ToString());
+                    usuarios.Add(lista);
+                }
+                dgvUsuarios.DataSource = usuarios;
+                DBConnection.Connection.Close();
+            }
+        }
+
+        private void cckListar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cckListar.Checked)
+                cboOpcoes.Enabled = false;
+            else
+                cboOpcoes.Enabled = true;
         }
     }
 }

@@ -17,10 +17,6 @@ namespace SistemaMercado
             InitializeComponent();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
 
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
@@ -36,6 +32,13 @@ namespace SistemaMercado
                 this.Visible = false;
                 tela.Show();
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            TelaInicial tela = new TelaInicial();
+            this.Visible = false;
+            tela.Show();
         }
     }
 }

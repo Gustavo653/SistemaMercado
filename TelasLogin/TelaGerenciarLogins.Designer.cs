@@ -57,8 +57,7 @@ namespace SistemaMercado
             "Adicionar",
             "Alterar",
             "Excluir",
-            "Procurar",
-            "Listar"});
+            "Procurar"});
             this.cboOpcoes.Location = new System.Drawing.Point(94, 51);
             this.cboOpcoes.Name = "cboOpcoes";
             this.cboOpcoes.Size = new System.Drawing.Size(156, 21);
@@ -89,6 +88,7 @@ namespace SistemaMercado
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TelaGerenciarLogins";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciar Logins";
             this.ResumeLayout(false);
 
