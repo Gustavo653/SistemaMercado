@@ -86,6 +86,30 @@
     <Compile Include="TelasLogin\TelaGerenciarLogins.Designer.cs">
       <DependentUpon>TelaGerenciarLogins.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelasProduto\FuncoesTelaProduto\TelaAdicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelasProduto\FuncoesTelaProduto\TelaAdicionar.Designer.cs">
+      <DependentUpon>TelaAdicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelasProduto\FuncoesTelaProduto\TelaAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelasProduto\FuncoesTelaProduto\TelaAlterar.Designer.cs">
+      <DependentUpon>TelaAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelasProduto\FuncoesTelaProduto\TelaProcurar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelasProduto\FuncoesTelaProduto\TelaProcurar.Designer.cs">
+      <DependentUpon>TelaProcurar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelasProduto\FuncoesTelaProduto\TelaRemover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelasProduto\FuncoesTelaProduto\TelaRemover.Designer.cs">
+      <DependentUpon>TelaRemover.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelasProduto\TelaGerenciarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +160,12 @@
     <EmbeddedResource Include="TelasLogin\TelaGerenciarLogins.resx">
       <DependentUpon>TelaGerenciarLogins.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TelasProduto\FuncoesTelaProduto\TelaAdicionar.resx">
+      <DependentUpon>TelaAdicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelasProduto\TelaGerenciarProdutos.resx">
+      <DependentUpon>TelaGerenciarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -149,5 +179,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
