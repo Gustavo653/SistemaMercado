@@ -163,6 +163,9 @@
     <EmbeddedResource Include="TelasProduto\FuncoesTelaProduto\TelaAdicionar.resx">
       <DependentUpon>TelaAdicionar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TelasProduto\FuncoesTelaProduto\TelaAlterar.resx">
+      <DependentUpon>TelaAlterar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelasProduto\TelaGerenciarProdutos.resx">
       <DependentUpon>TelaGerenciarProdutos.cs</DependentUpon>
     </EmbeddedResource>

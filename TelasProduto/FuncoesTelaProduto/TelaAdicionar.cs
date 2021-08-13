@@ -60,6 +60,8 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
             DBConnection.Connection.Close();
             dr.Close();
             cboOpcoes.DataSource = nomes;
+            txtNome.Enabled = false;
+            txtPreco.Enabled = false;
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -78,8 +80,12 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
             }
             else
             {
-
+                string update = $"UPDATE dbo.Produtos Set quantidade = {txtQtd.Text} WHERE nome = '{cboOpcoes.Text}'";
+                DBConnection.Executa(update);
             }
+            TelaAdicionar tela = new TelaAdicionar();
+            this.Visible = false;
+            tela.Show();
         }
 
         private void cboOpcoes_SelectedIndexChanged(object sender, EventArgs e)
