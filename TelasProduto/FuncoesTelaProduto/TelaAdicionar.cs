@@ -14,7 +14,6 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
 {
     public partial class TelaAdicionar : Form
     {
-        CultureInfo enUs = new CultureInfo("en-US");
         public TelaAdicionar()
         {
             InitializeComponent();
@@ -70,7 +69,7 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
             {
                 if (!string.IsNullOrEmpty(txtNome.Text) && !string.IsNullOrEmpty(txtPreco.Text) && !string.IsNullOrEmpty(txtQtd.Text))
                 {
-                    string insert = $"INSERT into dbo.Produtos (nome, quantidade, preco) values ('{txtNome.Text}', {txtQtd.Text} , {string.Format(enUs, "{0:N0}", txtPreco.Text)})";
+                    string insert = $"INSERT into dbo.Produtos (nome, quantidade, preco) values ('{txtNome.Text}', {txtQtd.Text} , {string.Format(CultureInfo.InvariantCulture, "{0:N0}", txtPreco.Text)})";
                     DBConnection.Executa(insert);
                 }
                 else

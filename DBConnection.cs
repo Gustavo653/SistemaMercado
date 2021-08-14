@@ -9,7 +9,8 @@ namespace SistemaMercado
 {
     public static class DBConnection
     {
-        public static SqlConnection Connection { get; set; } = new SqlConnection("Data Source=BUE205D12;Initial Catalog=BDTurmaManha;User ID=guest01;Password=@Senac2021");
+        //public static SqlConnection Connection { get; set; } = new SqlConnection("Data Source=BUE205D12;Initial Catalog=BDTurmaManha;User ID=guest01;Password=@Senac2021");
+        public static SqlConnection Connection { get; set; } = new SqlConnection("Data Source=DESKTOP-VE6HMRL;Initial Catalog=master;Integrated Security=True");
 
         public static void Executa(string comando)
         {

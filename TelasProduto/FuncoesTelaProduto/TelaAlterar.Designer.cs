@@ -156,8 +156,11 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnAlterar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "TelaAlterar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alterar Produto";
             this.Load += new System.EventHandler(this.TelaAlterar_Load);
             this.ResumeLayout(false);

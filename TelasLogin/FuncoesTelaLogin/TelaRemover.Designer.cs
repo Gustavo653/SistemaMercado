@@ -63,6 +63,7 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
             this.cboOpcoes.Name = "cboOpcoes";
             this.cboOpcoes.Size = new System.Drawing.Size(156, 21);
             this.cboOpcoes.TabIndex = 7;
+            this.cboOpcoes.SelectedIndexChanged += new System.EventHandler(this.cboOpcoes_SelectedIndexChanged);
             // 
             // btnSelecionar
             // 

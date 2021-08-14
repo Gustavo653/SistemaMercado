@@ -43,7 +43,8 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-
+            string update = $"UPDATE dbo.Produtos Set nome = '{txtNome.Text}', quantidade = {txtQtd.Text}, preco = {txtPreco.Text} WHERE nome = '{cboOpcoes.Text}'";
+            DBConnection.Executa(update);
         }
     }
 }

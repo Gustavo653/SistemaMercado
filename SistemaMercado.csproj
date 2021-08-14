@@ -50,6 +50,7 @@
     <Compile Include="DBConnection.cs" />
     <Compile Include="HashLogin.cs" />
     <Compile Include="ListaLogin.cs" />
+    <Compile Include="ListaProduto.cs" />
     <Compile Include="TelasIniciais\TelaAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +166,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelasProduto\FuncoesTelaProduto\TelaAlterar.resx">
       <DependentUpon>TelaAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelasProduto\FuncoesTelaProduto\TelaProcurar.resx">
+      <DependentUpon>TelaProcurar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelasProduto\FuncoesTelaProduto\TelaRemover.resx">
+      <DependentUpon>TelaRemover.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelasProduto\TelaGerenciarProdutos.resx">
       <DependentUpon>TelaGerenciarProdutos.cs</DependentUpon>

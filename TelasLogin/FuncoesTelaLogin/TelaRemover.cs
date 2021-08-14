@@ -46,5 +46,10 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
             DBConnection.Executa(delete);
             MessageBox.Show("Usuário removido!", "Remover", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void cboOpcoes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
