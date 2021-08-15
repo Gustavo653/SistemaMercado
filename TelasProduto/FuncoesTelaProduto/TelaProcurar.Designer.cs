@@ -52,7 +52,7 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.PapayaWhip;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Location = new System.Drawing.Point(177, 41);
+            this.btnVoltar.Location = new System.Drawing.Point(246, 41);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 8;
@@ -75,7 +75,7 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
             // 
             this.txtProcurar.BackColor = System.Drawing.Color.PapayaWhip;
             this.txtProcurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtProcurar.Location = new System.Drawing.Point(177, 12);
+            this.txtProcurar.Location = new System.Drawing.Point(246, 12);
             this.txtProcurar.Name = "txtProcurar";
             this.txtProcurar.Size = new System.Drawing.Size(75, 23);
             this.txtProcurar.TabIndex = 6;
@@ -88,11 +88,12 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.AllowUserToOrderColumns = true;
+            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(12, 73);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
-            this.dgvUsuarios.Size = new System.Drawing.Size(240, 191);
+            this.dgvUsuarios.Size = new System.Drawing.Size(309, 191);
             this.dgvUsuarios.TabIndex = 5;
             // 
             // TelaProcurar
@@ -100,7 +101,7 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
-            this.ClientSize = new System.Drawing.Size(264, 276);
+            this.ClientSize = new System.Drawing.Size(333, 276);
             this.Controls.Add(this.cckListar);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.cboOpcoes);

@@ -43,6 +43,7 @@ namespace SistemaMercado.TelasLogin.FuncoesTelaLogin
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.AllowUserToOrderColumns = true;
+            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(12, 73);
             this.dgvUsuarios.Name = "dgvUsuarios";

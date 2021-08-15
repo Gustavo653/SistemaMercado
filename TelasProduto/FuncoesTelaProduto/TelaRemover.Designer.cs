@@ -87,6 +87,7 @@ namespace SistemaMercado.TelasProduto.FuncoesTelaProduto
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "TelaRemover";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remover Produto";
             this.Load += new System.EventHandler(this.TelaRemover_Load);
             this.ResumeLayout(false);

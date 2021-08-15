@@ -48,9 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
-    <Compile Include="HashLogin.cs" />
-    <Compile Include="ListaLogin.cs" />
-    <Compile Include="ListaProduto.cs" />
+    <Compile Include="TelasIniciais\HashLogin.cs" />
+    <Compile Include="TelasLogin\ListaLogin.cs" />
+    <Compile Include="TelasProduto\ListaProduto.cs" />
     <Compile Include="TelasIniciais\TelaAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelasIniciais\TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelasIniciais\TelaVenda.resx">
+      <DependentUpon>TelaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelasLogin\FuncoesTelaLogin\TelaAdicionar.resx">
       <DependentUpon>TelaAdicionar.cs</DependentUpon>
