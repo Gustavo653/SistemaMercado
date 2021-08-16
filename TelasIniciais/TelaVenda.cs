@@ -21,18 +21,7 @@ namespace SistemaMercado
 
         private void TelaVenda_Load(object sender, EventArgs e)
         {
-            List<string> produtos = new List<string>();
-            string select = $"SELECT nome from dbo.Produtos";
-            SqlCommand cmd = new SqlCommand(select, DBConnection.Connection);
-            DBConnection.Connection.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                produtos.Add(dr["nome"].ToString());
-            }
-            DBConnection.Connection.Close();
-            dr.Close();
-            cboProdutos.DataSource = produtos;
+            AtualizarComboBox();
         }
 
         private void cboProdutos_SelectedIndexChanged(object sender, EventArgs e)
@@ -60,6 +49,7 @@ namespace SistemaMercado
             string update = $"UPDATE dbo.Produtos Set quantidade = quantidade - {cboQuantidade.Text} WHERE nome = '{cboProdutos.Text}'";
             DBConnection.Executa(update);
             dgvCarrinho.Rows.Add(cboProdutos.Text, cboQuantidade.Text, txtPreco.Text);
+            AtualizarComboBox();
         }
 
         private void btnEncerrarVenda_Click(object sender, EventArgs e)
@@ -80,13 +70,36 @@ namespace SistemaMercado
             }
 
             Interaction.MsgBox($"Valor total da compra: {precoTotal:c}", MsgBoxStyle.OkOnly, "Encerrando compra");
-            string valorRecebido = Interaction.InputBox("Insira o valor recebido pelo cliente", "Recebimento", "", 200, 200);
+            string valorRecebido;
+            while (true)
+            {
+                valorRecebido = Interaction.InputBox("Insira o valor recebido pelo cliente", "Recebimento", "", 200, 200);
+                if (Convert.ToDouble(valorRecebido) >= precoTotal)
+                    break;
+                else
+                    Interaction.MsgBox($"Valor insuficiente! \nFaltam {precoTotal - Convert.ToDouble(valorRecebido):c}", MsgBoxStyle.OkOnly, "Recebimento");
+            }
             double valorTroco = Convert.ToDouble(valorRecebido) - precoTotal;
             Interaction.MsgBox($"Agradecemos sua compra! \nSeu troco: {valorTroco:c}", MsgBoxStyle.OkOnly, "Troco");
 
             TelaVenda tela = new TelaVenda();
             this.Visible = false;
             tela.Show();
+        }
+        private void AtualizarComboBox()
+        {
+            List<string> produtos = new List<string>();
+            string select = $"SELECT nome from dbo.Produtos WHERE quantidade > 0";
+            SqlCommand cmd = new SqlCommand(select, DBConnection.Connection);
+            DBConnection.Connection.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                produtos.Add(dr["nome"].ToString());
+            }
+            DBConnection.Connection.Close();
+            dr.Close();
+            cboProdutos.DataSource = produtos;
         }
         private class Produto
         {
