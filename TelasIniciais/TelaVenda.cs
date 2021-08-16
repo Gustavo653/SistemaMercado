@@ -83,6 +83,10 @@ namespace SistemaMercado
             string valorRecebido = Interaction.InputBox("Insira o valor recebido pelo cliente", "Recebimento", "", 200, 200);
             double valorTroco = Convert.ToDouble(valorRecebido) - precoTotal;
             Interaction.MsgBox($"Agradecemos sua compra! \nSeu troco: {valorTroco:c}", MsgBoxStyle.OkOnly, "Troco");
+
+            TelaVenda tela = new TelaVenda();
+            this.Visible = false;
+            tela.Show();
         }
         private class Produto
         {
