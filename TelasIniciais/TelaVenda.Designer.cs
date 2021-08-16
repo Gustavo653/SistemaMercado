@@ -102,6 +102,7 @@ namespace SistemaMercado
             this.btnAdicionar.TabIndex = 2;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // btnEncerrarVenda
             // 
@@ -113,6 +114,7 @@ namespace SistemaMercado
             this.btnEncerrarVenda.TabIndex = 3;
             this.btnEncerrarVenda.Text = "Encerrar Venda";
             this.btnEncerrarVenda.UseVisualStyleBackColor = false;
+            this.btnEncerrarVenda.Click += new System.EventHandler(this.btnEncerrarVenda_Click);
             // 
             // label1
             // 

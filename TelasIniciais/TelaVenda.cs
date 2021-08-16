@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace SistemaMercado
 {
@@ -52,6 +53,47 @@ namespace SistemaMercado
             DBConnection.Connection.Close();
             dr.Close();
             cboQuantidade.DataSource = quantidades;
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            string update = $"UPDATE dbo.Produtos Set quantidade = quantidade - {cboQuantidade.Text} WHERE nome = '{cboProdutos.Text}'";
+            DBConnection.Executa(update);
+            dgvCarrinho.Rows.Add(cboProdutos.Text, cboQuantidade.Text, txtPreco.Text);
+        }
+
+        private void btnEncerrarVenda_Click(object sender, EventArgs e)
+        {
+            List<Produto> produtos = new List<Produto>();
+            foreach (DataGridViewRow dataGridViewRow in dgvCarrinho.Rows)
+            {
+                Produto produto = new Produto(dataGridViewRow.Cells["ColunaPreco"].Value.ToString(), dataGridViewRow.Cells["ColunaQuantidade"].Value.ToString());
+                produtos.Add(produto);
+            }
+            double precoTotal = 0;
+            foreach (var item in produtos)
+            {
+                double precoProduto = 0;
+                precoProduto += Convert.ToDouble(item.Preco);
+                precoProduto *= Convert.ToDouble(item.Quantidade);
+                precoTotal += precoProduto;
+            }
+
+            Interaction.MsgBox($"Valor total da compra: {precoTotal:c}", MsgBoxStyle.OkOnly, "Encerrando compra");
+            string valorRecebido = Interaction.InputBox("Insira o valor recebido pelo cliente", "Recebimento", "", 200, 200);
+            double valorTroco = Convert.ToDouble(valorRecebido) - precoTotal;
+            Interaction.MsgBox($"Agradecemos sua compra! \nSeu troco: {valorTroco:c}", MsgBoxStyle.OkOnly, "Troco");
+        }
+        private class Produto
+        {
+            public string Preco { get; set; }
+            public string Quantidade { get; set; }
+
+            public Produto(string preco, string quantidade)
+            {
+                Preco = preco;
+                Quantidade = quantidade;
+            }
         }
     }
 }
